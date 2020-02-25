@@ -3,13 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>Countries n that...</title>
-    <script src="./js/bundle.js" charset="utf-8"></script>
+    <script src="./js/bundle.js"></script>
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
 
     <div id="app">
-      
+      <div >
+        <h1>Total Pop: {{totalPop}}</h1>
+      </div>
+
+      <div id="filterInput">
+        <h3>PICK YOUR FAV!!</h3>
+        <select >
+          <option v-for="(country, index) in countries">{{country.name}}</option>
+        </select>
+        <!-- <div id="country" v-model="selectedCountry">
+          <h1>{{country.name}}</h1>
+          <p>Population: {{country.population}}</p>
+          <p>Area: {{country.area}}</p>
+        </div> -->
+
+
+      </div>
+
+
+
     </div>
 
   </body>
