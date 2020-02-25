@@ -10,12 +10,12 @@
 
     <div id="app">
       <div >
-        <h1>Total Pop: {{totalPop}}</h1>
+        <h1>Total World Population: {{totalPop}}</h1>
       </div>
 
       <div>
 
-        <h3>PICK YOUR FAV!!</h3>
+        <h3>Pick a Country:</h3>
         <select v-model="selectedCountry">
           <option v-for="country in countries" :value="country">{{country.name}}</option>
         </select>
@@ -23,7 +23,7 @@
         <div id="country" v-if="selectedCountry">
           <h1>{{selectedCountry.name}}</h1>
           <p>Population: {{selectedCountry.population}}</p>
-          <p>Area: {{selectedCountry.area}}</p>
+          <img :src="selectedCountry.flag"/>
         </div>
 
       </div>
