@@ -13,17 +13,18 @@
         <h1>Total Pop: {{totalPop}}</h1>
       </div>
 
-      <div id="filterInput">
-        <h3>PICK YOUR FAV!!</h3>
-        <select >
-          <option v-for="(country, index) in countries">{{country.name}}</option>
-        </select>
-        <!-- <div id="country" v-model="selectedCountry">
-          <h1>{{country.name}}</h1>
-          <p>Population: {{country.population}}</p>
-          <p>Area: {{country.area}}</p>
-        </div> -->
+      <div>
 
+        <h3>PICK YOUR FAV!!</h3>
+        <select v-model="selectedCountry">
+          <option v-for="country in countries" :value="country">{{country.name}}</option>
+        </select>
+
+        <div id="country" v-if="selectedCountry">
+          <h1>{{selectedCountry.name}}</h1>
+          <p>Population: {{selectedCountry.population}}</p>
+          <p>Area: {{selectedCountry.area}}</p>
+        </div>
 
       </div>
 

@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     el: '#app',
     data: {
       countries: [
-      ]
+      ],
+      selectedCountry: null,
     },
     computed:{
       totalPop: function() {
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     selectedCountry: function(index) {
       let selections = this.countries[index].map((country) => {
-        console.log(selections);
+        return selections;
       })
     },
     mounted(){
